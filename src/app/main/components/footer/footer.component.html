@@ -1,6 +1,13 @@
 <div>
-    <button class="call-button" mat-fab color="warn" aria-label="Example icon button with a home icon">
+    <!-- <button class="call-button" mat-fab color="warn" aria-label="Example icon button with a home icon">
         <mat-icon>call</mat-icon>
+    </button> -->
+    <button class="call-button" mat-fab color="warn" [matMenuTriggerFor]="call">
+        <mat-icon>call</mat-icon>
+        <mat-menu class="menu-of-contacts" #call="matMenu">
+            <button class="contact-item" mat-menu-item>product.market@gmail.com</button>
+            <button class="contact-item" mat-menu-item>+380666870555</button>
+        </mat-menu>
     </button>
 
     <div class="sns-images">

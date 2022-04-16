@@ -16,10 +16,18 @@ h1{
 
 .menu-item{
     width: 250px;
-    border: 1px solid #0d0d0d;
-    background-color: aquamarine;
+    background-color: #a56c6836;
 };
 
 .menu-item + .menu-item {
     border-top-width: 0;
+};
+
+.logo-main{
+    position: relative;
+};
+
+.image-of-logo{
+    position: absolute;
+    bottom: -40px;
 };
