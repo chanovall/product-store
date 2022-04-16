@@ -1,0 +1,24 @@
+.buttons-for-login {
+    display: grid;
+    padding: 0 200px;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    overflow: auto;
+    flex: 1;
+}
+
+.each-login-button {
+    margin-top: 160px;
+    margin-bottom: 200px;
+    text-align: center;
+    width: 250px;
+    height: 80px;
+    font-size: 20px;
+}
+
+:host {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    flex: 1;
+}

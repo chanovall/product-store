@@ -1,0 +1,25 @@
+:host{
+    background-color: #e0cda6;
+    border-bottom: 1px solid #551DC9;
+}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+};
+
+.main-header{
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+    margin: 40px 20px;
+};
+
+.menu-item{
+    width: 250px;
+    border: 1px solid #0d0d0d;
+    background-color: aquamarine;
+};
+
+.menu-item + .menu-item {
+    border-top-width: 0;
+};

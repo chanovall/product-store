@@ -1,1 +1,20 @@
-<p>header</p>
+<div class="main-header">
+
+    <div> </div>
+
+    <div>
+        <h1>Вітаємо!</h1>
+    </div>
+
+    <div>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>menu</mat-icon>
+            <mat-menu class="menu-of-items" #menu="matMenu">
+                <button class="menu-item" mat-menu-item>Супермаркети</button>
+                <button class="menu-item" mat-menu-item>Партнерам</button>
+                <button class="menu-item" mat-menu-item>Запитання та відповіді</button>
+            </mat-menu>
+        </button>
+    </div>
+
+</div>

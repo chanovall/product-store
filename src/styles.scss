@@ -1,4 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@include mat.core();
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body .mat-menu-content:not(:empty) {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    flex: 1;
+    background-color: #EDE2CC;
+}
+
+.my-button.mat-raised-button.mat-primary{
+    background-color: #551DC9;
+}
