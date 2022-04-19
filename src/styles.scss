@@ -7,7 +7,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 body .mat-menu-content:not(:empty) {
     padding-top: 0px;
     padding-bottom: 0px;
-}
+};
 
 body{
     display: flex;
@@ -15,8 +15,12 @@ body{
     overflow: auto;
     flex: 1;
     background-color: #EDE2CC;
+};
+
+body .mat-form-field-appearance-fill .mat-form-field-flex{
+    background-color: antiquewhite;
 }
 
-.my-button.mat-raised-button.mat-primary{
-    background-color: #551DC9;
-}
+// .my-button.mat-raised-button.mat-primary{
+//     background-color: #551DC9;
+// }

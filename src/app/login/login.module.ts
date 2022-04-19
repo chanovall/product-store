@@ -5,6 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button'
 import { LoginComponent } from './components/login.component';
 import { ReactiveFormsModule }   from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { ReactiveFormsModule }   from '@angular/forms';
     MatMenuModule,
     MatIconModule,
     MatButtonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatInputModule
   ]
 })
 export class LoginModule { }
