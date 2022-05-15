@@ -1,20 +1,20 @@
-<form class="login-form">
+<form class="login-form" [formGroup]="myForm" (submit)="goToAdmin()">
     <h5 class="welcome-login">Введіть Ваші дані</h5>
 
     <div>
         <mat-form-field class="each-login-field" appearance="fill">
             <mat-label>Логін</mat-label>
-            <input class="each-login-input" matInput>
+            <input formControlName="login" class="each-login-input" matInput>
         </mat-form-field>
 
         <mat-form-field class="each-login-field" appearance="fill">
             <mat-label>Пароль</mat-label>
-            <input class="each-login-input" matInput type="password">
+            <input formControlName="password" class="each-login-input" matInput type="password">
         </mat-form-field>
     </div>
 
     <div>
-        <button mat-raised-button color="primary">Готово</button>
+        <button mat-raised-button color="primary" type="submit">Готово</button>
     </div>
 
 </form>

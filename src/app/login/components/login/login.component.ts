@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,15 +10,17 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class LoginComponent {
   myForm: FormGroup;
 
-  constructor() {
+  constructor(private router: Router){
     this.myForm = new FormGroup({
-
       "login": new FormControl("", Validators.required),
       "password": new FormControl("", Validators.required),
     });
+    
   }
 
-  submit() {
-    console.log(this.myForm);
+  goToAdmin() {
+    if(this.myForm.valid){
+      this.router.navigate(['admin'])
+    }
   }
 }

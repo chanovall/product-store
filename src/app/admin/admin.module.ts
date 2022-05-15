@@ -3,14 +3,16 @@ import { CommonModule } from '@angular/common';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button'
-import { LoginComponent } from './components/login/login.component';
+import { AdminComponent } from './components/admin/admin.component';
 import { ReactiveFormsModule }   from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
+import { AdminHeaderComponent } from './components/admin-header/admin-header.component';
 
 
 @NgModule({
   declarations: [
-    LoginComponent
+    AdminComponent,
+    AdminHeaderComponent
   ],
   imports: [
     CommonModule,
@@ -21,4 +23,4 @@ import {MatInputModule} from '@angular/material/input';
     MatInputModule
   ]
 })
-export class LoginModule { }
+export class AdminModule { }

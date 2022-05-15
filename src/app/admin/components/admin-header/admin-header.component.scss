@@ -1,0 +1,24 @@
+:host{
+    background-color: #e0cda6;
+    border-bottom: 1px solid #551DC9;
+}
+
+h1{
+    text-align: center;
+    font-size: 40px;
+};
+
+.admin-main-header{
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+    margin: 40px 20px;
+};
+
+.logo-main{
+    position: relative;
+};
+
+.image-of-logo{
+    position: absolute;
+    bottom: -40px;
+};
