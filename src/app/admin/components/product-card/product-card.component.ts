@@ -1,5 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+
+export interface Product {
+    "name": string;
+    "amount": number;
+    "measurement": string;
+    "category": string;
+}
 
 @Component({
     selector: 'app-product-card',
@@ -8,21 +15,22 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 
 export class ProductCardComponent {
+    @Output() addProduct = new EventEmitter<Product>();
     myForm: FormGroup;
     measurements = [
-        {value: 'kg', viewValue: 'кілограм'},
-        {value: 'g', viewValue: 'грам'},
-        {value: 'l', viewValue: 'літр'},
-        {value: 'ml', viewValue: 'мілілітр'}
-      ];
+        { value: 'kg', viewValue: 'кілограм' },
+        { value: 'g', viewValue: 'грам' },
+        { value: 'l', viewValue: 'літр' },
+        { value: 'ml', viewValue: 'мілілітр' }
+    ];
     categories = [
-        {value: 'veg', viewValue: 'овочі'},
-        {value: 'fruit', viewValue: 'фрукти'},
-        {value: 'milk', viewValue: 'молочні продукти'},
-        {value: 'fish', viewValue: 'риба'},
-        {value: 'else', viewValue: 'бакалія'},
-        {value: 'chips', viewValue: 'снеки'}
-      ];
+        { value: 'veg', viewValue: 'овочі' },
+        { value: 'fruit', viewValue: 'фрукти' },
+        { value: 'milk', viewValue: 'молочні продукти' },
+        { value: 'fish', viewValue: 'риба' },
+        { value: 'else', viewValue: 'бакалія' },
+        { value: 'chips', viewValue: 'снеки' }
+    ];
     constructor() {
         this.myForm = new FormGroup({
             "name": new FormControl("", Validators.required),
@@ -33,7 +41,9 @@ export class ProductCardComponent {
 
     }
 
-    saveProduct() { 
-        console.log(this.myForm.value)
+    saveProduct() {
+        if (this.myForm.valid) {
+            this.addProduct.emit(this.myForm.value)
+        };
     }
 }

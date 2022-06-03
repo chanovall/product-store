@@ -9,13 +9,15 @@ import { MatInputModule } from '@angular/material/input';
 import { AdminHeaderComponent } from './components/admin-header/admin-header.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { MatSelectModule } from '@angular/material/select';
+import { ProductListComponent } from './components/product-list/product-list.component';
 
 
 @NgModule({
   declarations: [
     AdminComponent,
     AdminHeaderComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    ProductListComponent
   ],
   imports: [
     CommonModule,

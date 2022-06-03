@@ -10,16 +10,16 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   myForm: FormGroup;
 
-  constructor(private router: Router){
+  constructor(private router: Router) {
     this.myForm = new FormGroup({
       "login": new FormControl("", Validators.required),
       "password": new FormControl("", Validators.required),
     });
-    
+
   }
 
   goToAdmin() {
-    if(this.myForm.valid){
+    if (this.myForm.valid) {
       this.router.navigate(['admin'])
     }
   }
